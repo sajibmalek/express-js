@@ -73,9 +73,16 @@ app.get('/header',function (req,res) {
     res.append("name","sajib");
     res.append("age","23");
     res.append("city","rajshahi");
-
-
     res.status(201).end('Header Response');
+})
+
+//Response Set Cookies
+app.get('/cookie',function (req,res) {
+res.cookie('name','Sajib')
+    res.cookie('age','23')
+    res.cookie('city','Rajshahi')
+    res.cookie('gender','male')
+    res.end('Cookie Run success')
 
 })
 
