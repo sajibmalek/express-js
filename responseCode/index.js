@@ -49,6 +49,38 @@ app.get("/four",function (req, res) {
 
     res.json(json);
 });
+///Response Download
+app.get('/dn',function (req,res) {
+ res.download('./uploads/shinchan.jpg');
+})
+
+//Response Redirect
+
+app.get('/redirect',function (req,res) {
+res.redirect("http://localhost:8000/New");
+
+})
+
+
+app.get('/New',function (req,res) {
+    res.send('Redirect Response');
+})
+
+
+// Response Header
+
+app.get('/header',function (req,res) {
+    res.append("name","sajib");
+    res.append("age","23");
+    res.append("city","rajshahi");
+
+
+    res.status(201).end('Header Response');
+
+})
+
+
+
 app.listen(8000,function () {
     console.log("Server Run Successfully");
 });
