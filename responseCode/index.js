@@ -35,7 +35,7 @@ app.get("/four",function (req, res) {
             age:23,
             city:'joypurhat',
             gender:'female',
-            img_url: "https://scontent.fdac138-2.fna.fbcdn.net/v/t39.30808-6/340662650_219431087434503_855959013877486101_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=09cbfe&_nc_eui2=AeFwv7KZKKZqPG2Yc1HWTRqYlJB7u5sv1NiUkHu7my_U2BV7tw-Rt0ZkykS0OXYuEFY3Ec8lFJbwh_qKrT_u-W_6&_nc_ohc=9Kd-c59Krk4AX_l-VV2&_nc_ht=scontent.fdac138-2.fna&oh=00_AfBJ1lJCyV8EX0d78IXTJ_a2OGgI0cWNVFhPdK48O86O0Q&oe=64432E7B",
+
         },
 
         {
@@ -98,6 +98,19 @@ app.get('/url',function (req,res) {
     let lastName=req.query.lastName;
     res.end(firstName+' '+lastName)
 })
+
+///Get Request Header
+
+
+
+
+
+
+
+
+
+
+
 
 app.listen(8000,function () {
     console.log("Server Run Successfully");
