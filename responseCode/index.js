@@ -85,8 +85,13 @@ res.cookie('name','Sajib')
     res.end('Cookie Run success')
 
 })
+// Cookie Clear
+app.get('/cookie/clear',function (req,res) {
+   res.clearCookie('name')
+    res.clearCookie('age')
+    res.end('Cookie clear successfully')
 
-
+})
 
 app.listen(8000,function () {
     console.log("Server Run Successfully");
