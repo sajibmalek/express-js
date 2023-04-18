@@ -90,7 +90,13 @@ app.get('/cookie/clear',function (req,res) {
    res.clearCookie('name')
     res.clearCookie('age')
     res.end('Cookie clear successfully')
-
+})
+//Get Request With URL Query
+app.get('/url',function (req,res) {
+    //query=http://localhost:8000?firstName=Sajib&lastName=Malek
+    let firstName=req.query.firstName;
+    let lastName=req.query.lastName;
+    res.end(firstName+' '+lastName)
 })
 
 app.listen(8000,function () {
