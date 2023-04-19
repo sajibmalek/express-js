@@ -1,6 +1,8 @@
 var expess=require('express');
+var bodyParser=require('body-parser');
 
 app= expess();
+app.use(bodyParser.json());
 /// Normal Routing
 app.get('/one',(req, res) => {
     res.send('response one');
@@ -121,9 +123,14 @@ app.post('/post/url',function (req,res) {
     let lastName=req.query.lastName;
     res.end(firstName+' '+lastName)
 })
+//Post Request With Header
 
-
-
+app.post('/post/header',function (req,res) {
+    //query=http://localhost:8000?firstName=Sajib&lastName=Malek
+    let userName=req.header('username');
+    let password=req.header('password');
+    res.end(userName+' '+password)
+})
 
 
 app.listen(8000,function () {
