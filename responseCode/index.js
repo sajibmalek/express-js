@@ -131,6 +131,12 @@ app.post('/post/header',function (req,res) {
     let password=req.header('password');
     res.end(userName+' '+password)
 })
+//Working with JSON Body
+app.post('/post/body',function (req,res) {
+    let jsonData=req.body;
+    let stringJson=JSON.stringify(jsonData);
+res.send(stringJson);
+})
 
 
 app.listen(8000,function () {
