@@ -114,7 +114,13 @@ app.post('/header/req',function (req,res) {
     let lastName=req.header('lastName');
     res.end(firstName+' '+lastName)
 })
-
+///Post Request With URL Query
+app.post('/post/url',function (req,res) {
+    //query=http://localhost:8000?firstName=Sajib&lastName=Malek
+    let firstName=req.query.firstName;
+    let lastName=req.query.lastName;
+    res.end(firstName+' '+lastName)
+})
 
 
 
