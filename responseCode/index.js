@@ -101,8 +101,12 @@ app.get('/url',function (req,res) {
 
 ///Get Request Header
 
-
-
+app.get('/header/req',function (req,res) {
+    //query=http://localhost:8000?firstName=Sajib&lastName=Malek
+    let firstName=req.header('firstName');
+    let lastName=req.header('lastName');
+    res.end(firstName+' '+lastName)
+})
 
 
 
